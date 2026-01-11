@@ -123,8 +123,8 @@ export default function LandingPage() {
                                     <Link href="/dashboard">Go to Dashboard <ArrowRight className="ml-2 h-5 w-5" /></Link>
                                 </Button>
                             </SignedIn>
-                            <Button variant="outline" size="lg" className="h-14 px-8 text-lg rounded-xl border-2 hover:bg-muted/50">
-                                View Demo
+                            <Button variant="outline" size="lg" className="h-14 px-8 text-lg rounded-xl border-2 hover:bg-muted/50" asChild>
+                                <Link href="#features">View Demo</Link> {/* [MODIFIED] Changed to 'View Demo' page.tsx line 127 */ }
                             </Button>
                         </motion.div>
 
