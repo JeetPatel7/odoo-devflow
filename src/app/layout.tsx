@@ -1,12 +1,14 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google"; // [MODIFIED] Added 'Outfit' for headings
+
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 
-const inter = Inter({ subsets: ["latin"] });
-
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+// [NEW] Configure 'Outfit' font with a variable for Tailwind
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
 
 export const metadata: Metadata = {
   title: {
@@ -42,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ClerkProvider>
-        <body className={cn(inter.className, "antialiased bg-background text-foreground")}>
+        <body className={cn(inter.variable, outfit.variable, "antialiased bg-background text-foreground font-sans")}>
           {children}
           <Toaster richColors position="top-right" />
         </body>
