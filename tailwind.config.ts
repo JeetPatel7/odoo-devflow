@@ -18,6 +18,11 @@ const config = {
             },
         },
         extend: {
+            // [NEW] Extend Tailwind to use the custom fonts defined in globals.css/layout.tsx
+            fontFamily: {
+                sans: ["var(--font-inter)", "sans-serif"],
+                heading: ["var(--font-outfit)", "sans-serif"],
+            },
             colors: {
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
