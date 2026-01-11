@@ -54,7 +54,10 @@ export function RecentActivityList({ activities }: { activities: RecentActivity[
                                     </div>
                                 </div>
                                 <div className="text-right">
-                                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400">
+                                    <span 
+                                        suppressHydrationWarning
+                                        className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"
+                                    >
                                         {activity.checkIn ? activity.checkIn.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'Checked In'}
                                     </span>
                                 </div>
