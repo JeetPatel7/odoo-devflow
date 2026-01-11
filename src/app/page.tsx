@@ -281,6 +281,103 @@ export default function LandingPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* Solutions Section */}
+                <section id="solutions" className="py-24 bg-white relative">
+                    <div className="container">
+                        <div className="text-center max-w-3xl mx-auto mb-16">
+                            <h2 className="text-3xl font-heading font-bold sm:text-4xl text-slate-900">
+                                Solutions for every team
+                            </h2>
+                            <p className="mt-4 text-lg text-slate-500">
+                                Whether you're a startup or an enterprise, Dayflow scales with you.
+                            </p>
+                        </div>
+                        <div className="grid md:grid-cols-3 gap-8">
+                            {[
+                                { title: "For Startups", icon: Zap, color: "text-amber-500", bg: "bg-amber-50", desc: "Get up and running in minutes. Basic attendance and leave management." },
+                                { title: "For Scale-ups", icon: BarChart3, color: "text-blue-500", bg: "bg-blue-50", desc: "Advanced analytics, automated payroll, and team performance tracking." },
+                                { title: "For Enterprise", icon: ShieldCheck, color: "text-indigo-500", bg: "bg-indigo-50", desc: "Custom integrations, SSO, audit logs, and dedicated support manager." }
+                            ].map((solution, i) => (
+                                <motion.div 
+                                    key={i}
+                                    whileHover={{ y: -5 }}
+                                    className="p-8 rounded-2xl bg-white border shadow-sm hover:shadow-md transition-all"
+                                >
+                                    <div className={`h-12 w-12 ${solution.bg} ${solution.color} rounded-xl flex items-center justify-center mb-6`}>
+                                        <solution.icon className="h-6 w-6" />
+                                    </div>
+                                    <h3 className="text-xl font-bold mb-3 text-slate-900">{solution.title}</h3>
+                                    <p className="text-slate-500">{solution.desc}</p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* Pricing Section */}
+                <section id="pricing" className="py-24 bg-slate-50">
+                    <div className="container">
+                        <div className="text-center max-w-3xl mx-auto mb-16">
+                            <h2 className="text-3xl font-heading font-bold sm:text-4xl text-slate-900">
+                                Simple, transparent pricing
+                            </h2>
+                            <p className="mt-4 text-lg text-slate-500">
+                                No hidden fees. Cancel anytime.
+                            </p>
+                        </div>
+                        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                            {/* Free Tier */}
+                            <div className="rounded-2xl border bg-white p-8 shadow-sm hover:shadow-md transition-all">
+                                <h3 className="text-lg font-semibold text-slate-900">Starter</h3>
+                                <div className="mt-4 flex items-baseline">
+                                    <span className="text-4xl font-bold text-slate-900">$0</span>
+                                    <span className="ml-1 text-sm text-slate-500">/month</span>
+                                </div>
+                                <p className="mt-4 text-sm text-slate-500">Perfect for small teams getting started.</p>
+                                <ul className="mt-6 space-y-4 text-sm text-slate-600">
+                                    <li className="flex items-center"><CheckCircle2 className="h-4 w-4 text-green-500 mr-2" /> Up to 10 Employees</li>
+                                    <li className="flex items-center"><CheckCircle2 className="h-4 w-4 text-green-500 mr-2" /> Basic Attendance</li>
+                                    <li className="flex items-center"><CheckCircle2 className="h-4 w-4 text-green-500 mr-2" /> Leave Management</li>
+                                </ul>
+                                <Button className="mt-8 w-full" variant="outline" asChild><Link href="#">Sign Up Free</Link></Button>
+                            </div>
+
+                            {/* Pro Tier */}
+                            <div className="relative rounded-2xl border-2 border-primary bg-white p-8 shadow-xl scale-105 z-10">
+                                <div className="absolute top-0 right-0 -mt-3 mr-3 rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white">Popular</div>
+                                <h3 className="text-lg font-semibold text-slate-900">Growth</h3>
+                                <div className="mt-4 flex items-baseline">
+                                    <span className="text-4xl font-bold text-slate-900">$29</span>
+                                    <span className="ml-1 text-sm text-slate-500">/month</span>
+                                </div>
+                                <p className="mt-4 text-sm text-slate-500">For growing businesses that need more.</p>
+                                <ul className="mt-6 space-y-4 text-sm text-slate-600">
+                                    <li className="flex items-center"><CheckCircle2 className="h-4 w-4 text-primary mr-2" /> Up to 50 Employees</li>
+                                    <li className="flex items-center"><CheckCircle2 className="h-4 w-4 text-primary mr-2" /> Advanced Reporting</li>
+                                    <li className="flex items-center"><CheckCircle2 className="h-4 w-4 text-primary mr-2" /> Automated Payroll</li>
+                                </ul>
+                                <Button className="mt-8 w-full" variant="premium" asChild><Link href="#">Get Started</Link></Button>
+                            </div>
+
+                            {/* Enterprise Tier */}
+                            <div className="rounded-2xl border bg-white p-8 shadow-sm hover:shadow-md transition-all">
+                                <h3 className="text-lg font-semibold text-slate-900">Enterprise</h3>
+                                <div className="mt-4 flex items-baseline">
+                                    <span className="text-4xl font-bold text-slate-900">$99</span>
+                                    <span className="ml-1 text-sm text-slate-500">/month</span>
+                                </div>
+                                <p className="mt-4 text-sm text-slate-500">For large organizations with specific needs.</p>
+                                <ul className="mt-6 space-y-4 text-sm text-slate-600">
+                                    <li className="flex items-center"><CheckCircle2 className="h-4 w-4 text-green-500 mr-2" /> Unlimited Employees</li>
+                                    <li className="flex items-center"><CheckCircle2 className="h-4 w-4 text-green-500 mr-2" /> Custom Roles</li>
+                                    <li className="flex items-center"><CheckCircle2 className="h-4 w-4 text-green-500 mr-2" /> 24/7 Priority Support</li>
+                                </ul>
+                                <Button className="mt-8 w-full" variant="outline" asChild><Link href="#">Contact Sales</Link></Button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 
                 {/* Social Proof / Trust */}
                 <section className="py-20 bg-white border-t">
