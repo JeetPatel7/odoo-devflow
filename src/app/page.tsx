@@ -282,7 +282,7 @@ export default function LandingPage() {
                     </div>
                 </section>
 
-                {/* Solution Section*/}
+                {/* Solutions Section*/}
                 <section id="solutions" className="py-24 bg-white relative">
                     <div className="container">
                         <div className="text-center max-w-3xl mx-auto mb-16">
