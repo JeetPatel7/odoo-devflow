@@ -31,8 +31,15 @@ export function Header() {
 
                 <div className="flex items-center gap-3">
                     <div className="text-right hidden md:block">
-                        <p className="text-sm font-medium leading-none">{user?.fullName || "Admin User"}</p>
-                        <p className="text-xs text-muted-foreground">{user?.primaryEmailAddress?.emailAddress || "admin@dayflow.com"}</p>
+                        {user ? (
+                            <>
+                                <p className="text-sm font-medium leading-none">{user.fullName}</p>
+                                <p className="text-xs text-muted-foreground">{user.primaryEmailAddress?.emailAddress}</p>
+                            </>
+                        ) : (
+                            /* Fallback to avoid hydration mismatch if user isn't loaded yet */
+                            <div className="h-8 w-8" /> 
+                        )}
                     </div>
                     <UserButton
                         afterSignOutUrl="/"
