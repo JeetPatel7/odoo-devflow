@@ -1,14 +1,12 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "sonner";
 import "./globals.css";
-import { Inter, Outfit } from "next/font/google"; // [MODIFIED] Added 'Outfit' for headings
-
+import { Inter, Outfit } from "next/font/google"; // Changed
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-// [NEW] Configure 'Outfit' font with a variable for Tailwind
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
+const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" }); // Added
 
 export const metadata: Metadata = {
   title: {
