@@ -124,7 +124,7 @@ export default function LandingPage() {
                                 </Button>
                             </SignedIn>
                             <Button variant="outline" size="lg" className="h-14 px-8 text-lg rounded-xl border-2 hover:bg-muted/50" asChild>
-                                <Link href="#features">View Demo</Link> {/* [MODIFIED] Changed to 'View Demo' page.tsx line 127 */ }
+                                <Link href="#features">View Demo</Link>
                             </Button>
                         </motion.div>
 
