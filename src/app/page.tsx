@@ -124,7 +124,7 @@ export default function LandingPage() {
                                 </Button>
                             </SignedIn>
                             <Button variant="outline" size="lg" className="h-14 px-8 text-lg rounded-xl border-2 hover:bg-muted/50" asChild>
-                                <Link href="#features">View Demo</Link>
+                                <Link href="https://www.youtube.com/watch?v=wopPRfeeCeQ">View Demo</Link> 
                             </Button>
                         </motion.div>
 
